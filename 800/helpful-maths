@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	string s; cin >> s;
+	vector<int> t;
+	for(int i : s) {
+		if(i == '1' || i == '2' || i == '3') {
+			t.push_back(i - '0');
+		}
+	}
+	sort(t.begin(), t.end());
+	for(int i = 0; i <= t.size() - 1; i++) {
+		if(i == t.size() - 1) {
+            cout << t[i];
+        } else {
+            cout << t[i] << '+';
+        }
+	}
+	
+	return 0;
+	
+}
